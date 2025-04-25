@@ -38,3 +38,6 @@ Markdown에서는 특수한 기호를 텍스트 양쪽에 붙이는 것으로 �
 기울임체: 텍스트 앞뒤에 * (또는 _) 한 개를 붙입니다.
 취소선: 텍스트 앞뒤에 ~~ 물결표 두 개를 붙입니다.
 ```
+
+출처
+https://docs.github.com/ko/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
