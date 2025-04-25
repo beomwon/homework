@@ -32,6 +32,8 @@
         margin-bottom: 1.5rem;
         object-fit: cover;
         border: 5px solid #f0f0f0;
+        cursor: pointer;
+        transition: transform 0.3s ease;
       }
 
       .name {
@@ -77,14 +79,9 @@
   </head>
   <body>
     <div class="profile-card">
-      <!-- 절대 경로로 이미지 삽입하기 -->
-      <!-- Github에서 절대 경로는 권장되지 않습니다. -->
-      <!-- 이유 1 : 저장소의 이름을 homework에서 다른 이름으로 변경할 경우 모든 절대 경로를 수정해야 합니다. -->
-      <!-- Github 배포를 위해 절대 경로를 사용할 경우 로컬에서 확인이 불가합니다. (https://localhost:8090으로 접속했을 때 homework을 찾지 못함) -->
-      <!-- 이러한 이유로 과제를 작성할 경우 반드시 경로는 상대 경로를 사용해 주세요 -->
-      <!-- <img src="/homework/src/assets/ssam.jpg" alt="슬비쌤 프로필" class="profile-image" /> -->
-      <!-- 상대 경로로 이미지 삽입하기 -->
-      <img src="./src/assets/gwangbu.png" alt="광부앱" class="profile-image" />
+      <a class="easter-egg" href="https://gwangbu.life" target="_blank">
+        <img src="./src/assets/gwangbu.png" alt="광부앱" class="profile-image" />
+      </a>
       <h1 class="name">이범원</h1>
       <p class="bio">멋쟁이 사자처럼 프론트엔드 부트캠프 14기 이범원 입니다.</p>
       <p>과제 결과는 링크를 선택해주세요.</p>
