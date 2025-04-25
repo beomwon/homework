@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Markdown Preview</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  </head>
+  <body>
+    <div id="content"></div>
+
+    <script>
+      // 마크다운 파일을 가져오기
+      fetch('./src/md/markdown.md')
+        .then((response) => response.text())
+        .then((markdownText) => {
+          // marked.js를 사용하여 마크다운을 HTML로 변환
+          const htmlContent = marked(markdownText);
+          // 변환된 HTML을 페이지에 삽입
+          document.getElementById('content').innerHTML = htmlContent;
+        });
+    </script>
+  </body>
+</html>
