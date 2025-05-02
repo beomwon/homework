@@ -1,0 +1,65 @@
+/* 기본 배경 및 중앙 정렬 */
+body {
+  margin: 0;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* 아바타 전체 리스트 */
+.avatar-list {
+  background-color: #ffffff;
+  width: 336px;
+  margin: 20;
+  overflow: hidden;
+  padding: 100px;
+}
+
+/* 아바타 항목 */
+.avatar-item {
+  float: left;
+  margin: 10px;
+  position: relative;
+}
+
+/* 아바타 이미지 */
+.avatar-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 상태 원 */
+.avatar-status {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  bottom: 0;
+  right: 0;
+  border: 2px solid #ffffff;
+}
+
+.is-online {
+  background-color: #4cfe88;
+}
+
+.is-offline {
+  background-color: #dbdbdb;
+}
+
+/* 스크린 리더 전용 텍스트 */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
