@@ -1,9 +1,8 @@
 .container {
-  min-width: 300px;
+  max-width: 500px;
   margin: auto;
   padding: 20px;
   font-family: sans-serif;
-  text-align: center;
 }
 
 .logo {
@@ -12,22 +11,20 @@
 }
 
 input[type='email'],
-input[type='password'],
-button {
+input[type='password'] {
   display: block;
   width: 100%;
   margin: 8px 0;
   padding: 10px;
   font-size: 1rem;
-  box-sizing: border-box;
-}
-
-input[type='email'],
-input[type='password'] {
   border: 1px solid #ccc;
 }
 
 button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
   background: #03cf5d;
   color: white;
   border: none;
@@ -37,7 +34,6 @@ button {
 .form-options {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin-top: 10px;
 }
 
@@ -54,7 +50,7 @@ button {
   height: 100%;
   opacity: 0;
   cursor: pointer;
-  z-index: 2;
+  z-index: 2; /* 포커스 가능하게 */
   margin: 0;
 }
 
@@ -78,23 +74,17 @@ button {
   display: none;
 }
 
+.checkbox-wrapper:focus-within {
+  outline: 2px solid #24388d;
+  border-radius: 4px;
+}
+
 .error-message {
   display: none;
   color: red;
   font-size: 0.875rem;
   margin-top: 0.25rem;
   padding-left: 10px;
-}
-
-.ip-security-text {
-  text-decoration: none;
-  color: #121212;
-  margin-right: 5px;
-}
-/* HTML5 validation style fallback */
-input:invalid:focus + .error-message,
-input:invalid:not(:placeholder-shown) + .error-message {
-  display: block;
 }
 
 .ip-security-toggle input[type='checkbox'] {
@@ -108,18 +98,24 @@ input:invalid:not(:placeholder-shown) + .error-message {
   overflow: hidden;
 }
 
-.ip-security-toggle label {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
+.ip-security-text {
+  text-decoration: none;
   color: #121212;
 }
 
-.off {
-  color: lightgray;
+/* 입력창이 포커스 잃었고 유효하지 않을 때 에러 표시 */
+input:invalid:focus,
+input:invalid:focus + .error-message,
+input:invalid:not(:placeholder-shown) + .error-message {
+  display: block;
 }
+
+.ip-security-toggle label {
+  cursor: pointer;
+}
+
 .ip-security-toggle .on {
-  color: #03cf5d;
+  color: green;
   display: none;
 }
 
@@ -129,20 +125,4 @@ input:invalid:not(:placeholder-shown) + .error-message {
 
 #ipSwitch:checked + label .off {
   display: none;
-}
-
-@media (max-width: 767px) {
-  .ip-security-toggle {
-    display: none;
-  }
-
-  .form-options {
-    flex-direction: row-reverse;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    width: 500px;
-  }
 }
