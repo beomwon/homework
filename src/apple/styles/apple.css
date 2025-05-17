@@ -1,0 +1,60 @@
+@import './card-component.css';
+
+body {
+  margin: 20px;
+}
+/* 카드 레이아웃 */
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.ipad-pro {
+  background-image: image-set(url('../products/ipad_pro.jpeg') 1x, url('../products/ipad_pro_2x.jpeg') 2x);
+}
+
+.ipad-air {
+  background-image: image-set(url('../products/ipad_air.jpeg') 1x, url('../products/ipad_air_2x.jpeg') 2x);
+}
+
+.iphone-15-pro {
+  background-image: image-set(url('../products/iphone15_pro.jpeg') 1x, url('../products/iphone_15pro_2x.jpeg') 2x);
+}
+
+.iphone-15 {
+  background-image: image-set(url('../products/iphone15.jpeg') 1x, url('../products/iphone15_2x.jpeg') 2x);
+}
+
+.watch {
+  background-image: image-set(url('../products/apple_watch.jpeg') 1x, url('../products/apple_watch_2x.jpeg') 2x);
+}
+
+.macbook-air {
+  background-image: image-set(url('../products/macbook_air.jpeg') 1x, url('../products/macbook_air_2x.jpeg') 2x);
+}
+
+.airpods-pro {
+  background-image: image-set(url('../products/airpods_pro.jpeg') 1x, url('../products/airpods_pro_2x.jpeg') 2x);
+}
+
+@media (min-width: 1024px) {
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ipad-pro {
+    grid-column: span 2;
+    background-image: image-set(url('../products/ipad_pro_wide.jpeg') 1x, url('../products/ipad_pro_wide_2x.jpeg') 2x);
+  }
+
+  .ipad-air {
+    grid-column: span 2;
+    background-image: image-set(url('../products/ipad_air_wide.jpeg') 1x, url('../products/ipad_air_wide_2x.jpeg') 2x);
+  }
+
+  .iphone-15-pro {
+    grid-column: span 2;
+    background-image: image-set(url('../products/iphone15_pro_wide.jpeg') 1x, url('../products/iphone_15pro_wide_2x.jpeg') 2x);
+  }
+}

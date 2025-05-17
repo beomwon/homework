@@ -1,0 +1,98 @@
+@import './reset.css';
+@import './theme.css';
+@import './base.css';
+
+.dark {
+  --button-color: var(--blue-100, #2997ff);
+  --button-color-hover: var(--blue-200, #0077ed);
+  color: var(--white);
+}
+
+.light {
+  --button-color: var(--light-black);
+  --button-color-hover: var(--light-black);
+  color: var(--light-black);
+}
+
+.card {
+  /* display: flex;
+  flex-direction: column;
+  gap: var(--small-spacing); */
+  min-width: 320px;
+  height: var(--size);
+  padding-top: var(--large-spacing);
+  border-radius: 16px;
+  text-align: center;
+  font-family: sans-serif;
+  /* background-image: image-set(url('../products/macbook_air.jpeg') 1x, url('../products/macbook_air_2x.jpeg') 2x); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .title {
+    font-weight: 600;
+    font-size: var(--large-text, 2rem);
+    margin-bottom: var(--small-spacing);
+  }
+
+  .sub-title {
+    font-size: var(--base-text, 1.1875rem);
+    margin-bottom: var(--x-small-spacing);
+  }
+
+  .release-date {
+    font-size: var(--small-text, 1.0625rem);
+    margin-bottom: var(--small-spacing);
+    color: var(--gray);
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--small-spacing);
+  }
+
+  .button {
+    padding: var(--x-small-spacing) var(--x-small-spacing);
+    border-radius: 1000px;
+    font-size: var(--xx-small-text);
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+
+  .button.filled {
+    background-color: var(--button-color);
+    color: var(--white);
+
+    &:hover {
+      background-color: var(--button-color-hover);
+    }
+  }
+
+  .button.outlined {
+    background-color: transparent;
+    color: var(--button-color);
+    border-color: var(--button-color);
+
+    &:hover {
+      background-color: var(--button-color);
+      color: var(--white);
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    height: var(--size);
+    padding-top: var(--extra-large-spacing);
+  }
+
+  .title {
+    font-size: var(--extra-large-text, 2.5rem);
+  }
+
+  .sub-title {
+    font-size: var(--medium-text, 1.3125rem);
+  }
+}
