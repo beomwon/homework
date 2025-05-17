@@ -23,14 +23,13 @@
   padding-top: var(--large-spacing);
   border-radius: 16px;
   text-align: center;
-  font-family: sans-serif;
   /* background-image: image-set(url('../products/macbook_air.jpeg') 1x, url('../products/macbook_air_2x.jpeg') 2x); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
   .title {
-    font-weight: 600;
+    font-weight: 800;
     font-size: var(--large-text, 2rem);
     margin-bottom: var(--small-spacing);
   }
