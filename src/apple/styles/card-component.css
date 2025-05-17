@@ -10,7 +10,7 @@
 
 .light {
   --button-color: var(--light-black);
-  --button-color-hover: var(--light-black);
+  --button-color-hover: var(--black);
   color: var(--light-black);
 }
 
